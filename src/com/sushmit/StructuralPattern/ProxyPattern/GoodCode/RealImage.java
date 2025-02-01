@@ -1,0 +1,20 @@
+package com.sushmit.StructuralPattern.ProxyPattern.GoodCode;
+
+public class RealImage implements Image{
+
+	private String filename;
+	
+	public RealImage(String filename) {
+		this.filename = filename;
+		loadImageFromDisk();   //Expensive Operation if we realy load it from the disk now we are just simulating for demo.
+	}
+	
+	private void loadImageFromDisk() {
+		System.out.println("Loading image from disk: "+filename);
+	}
+	
+	@Override
+	public void display() {
+		System.out.println("Displaying: "+filename);
+	}
+}
