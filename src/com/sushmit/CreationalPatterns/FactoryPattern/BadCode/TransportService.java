@@ -2,6 +2,7 @@ package com.sushmit.CreationalPatterns.FactoryPattern.BadCode;
 
 public class TransportService {
 	
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		Transport car = new Car();
 		Transport bike = new Bike();
